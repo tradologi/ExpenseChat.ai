@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================= */
+/* 🌍 BASE (LIGHT MODE DEFAULT) */
+/* ============================= */
+
+body {
+  @apply bg-gray-50 text-gray-900;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ============================= */
+/* 🌙 DARK MODE */
+/* ============================= */
+
+.dark body {
+  @apply bg-[#030712] text-white;
+}
+
+/* ============================= */
+/* 🌌 BACKGROUND EFFECTS (ONLY DARK) */
+/* ============================= */
+
+.dark body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(59,130,246,0.18), transparent 35%),
+    radial-gradient(circle at 85% 75%, rgba(168,85,247,0.15), transparent 40%),
+    radial-gradient(circle at 50% 100%, rgba(16,185,129,0.08), transparent 40%);
+  z-index: -1;
+}
+
+.dark body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 50px 50px;
+  mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
+  z-index: -1;
+}
+
+/* ============================= */
+/* 💎 GLASS CARD */
+/* ============================= */
+
+/* LIGHT MODE (FIXED PREMIUM LOOK) */
+.glass-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 20px;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.06),
+    0 2px 6px rgba(0,0,0,0.04);
+
+  transition: all 0.3s ease;
+}
+
+/* DARK MODE */
+.dark .glass-card {
+  background: rgba(17, 24, 39, 0.55);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.03),
+    0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* HOVER */
+.glass-card:hover {
+  transform: translateY(-3px);
+}
+
+.dark .glass-card:hover {
+  border: 1px solid rgba(168, 85, 247, 0.4);
+  box-shadow:
+    0 0 30px rgba(168, 85, 247, 0.15),
+    0 20px 40px rgba(0,0,0,0.6);
+}
+
+/* ============================= */
+/* ✨ TYPOGRAPHY */
+/* ============================= */
+
+.text-premium {
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+.text-money {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+/* LIGHT */
+.text-muted {
+  color: #6b7280;
+}
+
+/* DARK */
+.dark .text-muted {
+  color: rgba(255,255,255,0.6);
+}
+
+/* LABELS */
+.text-label {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #9ca3af;
+}
+
+.dark .text-label {
+  color: rgba(255,255,255,0.5);
+}
+
+/* ============================= */
+/* 🚀 SCROLL ANIMATION */
+/* ============================= */
+
+.scroll-left,
+.scroll-right {
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+
+.scroll-left {
+  transform: translateX(-80px);
+}
+
+.scroll-right {
+  transform: translateX(80px);
+}
+
+.scroll-show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ============================= */
+/* 💎 INPUT */
+/* ============================= */
+
+/* LIGHT */
+.premium-input {
+  @apply bg-white border border-gray-300 rounded-xl px-3 py-2 text-sm text-gray-900 placeholder-gray-400 outline-none transition-all duration-200;
+}
+
+/* DARK */
+.dark .premium-input {
+  @apply bg-white/5 border-white/10 text-white placeholder-gray-400;
+}
+
+.premium-input:focus {
+  @apply border-purple-500 shadow-[0_0_10px_rgba(168,85,247,0.4)];
+}
+
+/* ============================= */
+/* 🔘 QUICK BUTTON */
+/* ============================= */
+
+/* LIGHT */
+.quick-btn {
+  @apply text-xs px-3 py-1 rounded-full bg-gray-100 border border-gray-200 text-gray-700 hover:bg-gray-200 transition-all duration-200;
+}
+
+/* DARK */
+.dark .quick-btn {
+  @apply bg-white/5 border-white/10 text-gray-300 hover:bg-white/10;
+}
+@keyframes gradient-x {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient-x {
+  animation: gradient-x 6s ease infinite;
+}
+@keyframes gradient-x {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient-x {
+  animation: gradient-x 6s ease infinite;
+}
+@keyframes gradient-x {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient-x {
+  animation: gradient-x 6s ease infinite;
+}

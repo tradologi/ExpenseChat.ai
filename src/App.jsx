@@ -23,29 +23,29 @@ const Dashboard = () => {
 
       <main className="max-w-6xl mx-auto px-6 py-8 flex flex-col gap-8 flex-1 w-full">
 
-        {/* HEADER */}
+        
         <div className="relative text-center py-8">
 
-  {/* 🌟 BACKGROUND GLOW */}
+  
   <div className="absolute inset-0 flex justify-center">
     <div className="w-[420px] h-[200px] bg-emerald-500/10 blur-[110px] rounded-full"></div>
   </div>
 
   <div className="relative flex flex-col items-center">
 
-    {/* 👋 WELCOME TEXT */}
+    
     <p className="text-xs md:text-sm text-gray-400 tracking-widest uppercase mb-2">
     Welcome to ExpenseChat.ai
     </p>
 
-    {/* 🔥 MAIN HEADING */}
+    
     <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
       <span className="bg-gradient-to-r from-blue-500 via-indigo-500 to-emerald-400 bg-clip-text text-transparent">
         Smarter Spending Starts Here
       </span>
     </h1>
 
-    {/* ⚡ KEEP AI LINE */}
+    
     <p className="text-gray-400 mt-3 text-sm md:text-base">
       AI-powered financial dashboard ⚡
     </p>
@@ -55,7 +55,7 @@ const Dashboard = () => {
 </div>
         <SummarySection />
 
-        {/* ROW 1 */}
+        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <SpendingChart />
           <ActivitySection setShowTransactions={setShowTransactions} />
@@ -63,13 +63,13 @@ const Dashboard = () => {
 
         <AddTransaction />
 
-        {/* ROW 2 */}
+        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <CategoryBreakdown />
           <InsightsSection />
         </div>
 
-        {/* ✅ SHOW ONLY WHEN CLICKED */}
+        
         {showTransactions && (
           <TransactionList setShowTransactions={setShowTransactions} />
         )}

@@ -4,9 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ============================= */
-/* 🌍 BASE (LIGHT MODE DEFAULT) */
-/* ============================= */
+
 
 body {
   @apply bg-gray-50 text-gray-900;
@@ -15,17 +13,12 @@ body {
   overflow-x: hidden;
 }
 
-/* ============================= */
-/* 🌙 DARK MODE */
-/* ============================= */
+
 
 .dark body {
   @apply bg-[#030712] text-white;
 }
 
-/* ============================= */
-/* 🌌 BACKGROUND EFFECTS (ONLY DARK) */
-/* ============================= */
 
 .dark body::before {
   content: "";
@@ -50,11 +43,7 @@ body {
   z-index: -1;
 }
 
-/* ============================= */
-/* 💎 GLASS CARD */
-/* ============================= */
 
-/* LIGHT MODE (FIXED PREMIUM LOOK) */
 .glass-card {
   background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(14px);
@@ -70,7 +59,7 @@ body {
   transition: all 0.3s ease;
 }
 
-/* DARK MODE */
+
 .dark .glass-card {
   background: rgba(17, 24, 39, 0.55);
   backdrop-filter: blur(18px);
